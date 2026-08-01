@@ -8,6 +8,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Install compatible Azure CLI
+        run: |
+          python3 -m pip install --user "azure-cli==2.65.0"
+          echo "$HOME/.local/bin" >> "$GITHUB_PATH"
       - uses: azure/login@v2
         with:
           client-id: ${{ vars.AZURE_CLIENT_ID }}
