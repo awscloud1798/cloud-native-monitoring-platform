@@ -1,5 +1,0 @@
-- name: Terraform Plan
-  working-directory: ./terraform
-  run: terraform plan
-  env:
-    TF_VAR_alert_email: ${{ secrets.ALERT_EMAIL }}
