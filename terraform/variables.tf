@@ -29,3 +29,4 @@ variable "aks_node_count" {
 variable "alert_email" {
   type = string
 }
+
